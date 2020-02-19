@@ -1,6 +1,6 @@
 # hobby
 
-#git master 
+# git master 
 ## branch test 01
 
 # giti master
@@ -12,3 +12,5 @@
 # merge again and again
 
 # merge last
+
+# rebase
