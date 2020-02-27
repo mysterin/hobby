@@ -1,0 +1,6 @@
+server:
+  port: 8080
+wechat:
+  publicAccount:
+    token: hobby
+    encodingAESKey: uDtsDjE5Ddx2idzNBMTKNQ8e9tn45JM21whwmwSNaXe
