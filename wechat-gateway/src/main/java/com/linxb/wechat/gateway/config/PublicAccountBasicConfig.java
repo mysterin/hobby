@@ -1,10 +1,18 @@
 package com.linxb.wechat.gateway.config;
 
+import com.linxb.wechat.component.config.PublicAccountConfig;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Component;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
-@Component
+@Configuration
 public class PublicAccountBasicConfig {
+
+    @Value("${wechat.publicAccount.appId}")
+    private String appId;
+
+    @Value("${wechat.publicAccount.appSecret")
+    private String appSecret;
 
     @Value("${wechat.publicAccount.token}")
     private String token;
@@ -12,19 +20,13 @@ public class PublicAccountBasicConfig {
     @Value("${wechat.publicAccount.encodingAESKey}")
     private String encodingAESKey;
 
-    public String getToken() {
-        return token;
-    }
-
-    public void setToken(String token) {
-        this.token = token;
-    }
-
-    public String getEncodingAESKey() {
-        return encodingAESKey;
-    }
-
-    public void setEncodingAESKey(String encodingAESKey) {
-        this.encodingAESKey = encodingAESKey;
+    @Bean
+    public PublicAccountConfig publicAccountConfig() {
+        PublicAccountConfig publicAccountConfig = new PublicAccountConfig();
+        publicAccountConfig.setAppId(appId);
+        publicAccountConfig.setAppSecret(appSecret);
+        publicAccountConfig.setToken(token);
+        publicAccountConfig.setEncodingAESKey(encodingAESKey);
+        return publicAccountConfig;
     }
 }

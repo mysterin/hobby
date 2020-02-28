@@ -7,7 +7,7 @@ import java.util.Objects;
  */
 public class StringUtil {
 
-    public static boolean compare(String s1, String s2) {
+    public static boolean isEqual (String s1, String s2) {
         if (s1 == null && s2 == null) {
             return true;
         }

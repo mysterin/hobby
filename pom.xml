@@ -16,18 +16,23 @@
         <module>wechat-gateway</module>
         <module>wechat-component</module>
         <module>common-component</module>
+        <module>redis-component</module>
+        <module>wechat-service</module>
     </modules>
 
     <properties>
         <common.component.version>1.0.0</common.component.version>
         <wechat.component.version>1.0.0</wechat.component.version>
         <wechat.gateway.version>1.0.0</wechat.gateway.version>
+        <redis.component.version>1.0.0</redis.component.version>
+        <wechat.service.version>1.0.0</wechat.service.version>
         <netty.all.version>4.1.2.Final</netty.all.version>
         <slf4j.version>1.7.21</slf4j.version>
         <guava.version>18.0</guava.version>
         <junit.version>4.12</junit.version>
         <commons.codec.version>1.11</commons.codec.version>
         <fastjson.version>1.2.59</fastjson.version>
+        <dom4j.version>1.6.1</dom4j.version>
    </properties>
 
     <dependencyManagement>
@@ -54,6 +59,11 @@
                 <version>${wechat.gateway.version}</version>
             </dependency>
             <dependency>
+                <groupId>com.linxb</groupId>
+                <artifactId>wechat-service</artifactId>
+                <version>${wechat.service.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>commons-codec</groupId>
                 <artifactId>commons-codec</artifactId>
                 <version>${commons.codec.version}</version>
@@ -62,6 +72,11 @@
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>dom4j</groupId>
+                <artifactId>dom4j</artifactId>
+                <version>${dom4j.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

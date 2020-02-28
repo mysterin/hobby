@@ -26,6 +26,14 @@
             <groupId>com.linxb</groupId>
             <artifactId>common-component</artifactId>
         </dependency>
+        <dependency>
+            <groupId>com.linxb</groupId>
+            <artifactId>wechat-component</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.linxb</groupId>
+            <artifactId>wechat-service</artifactId>
+        </dependency>
     </dependencies>
 
     <build>

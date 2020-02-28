@@ -1,5 +1,8 @@
-package com.linxb.wechat.gateway.dto;
+package com.linxb.wechat.component.dto;
 
+/**
+ * 验证服务器是否可用的参数
+ */
 public class VerifyDto {
     private String signature;
     private String timestamp;

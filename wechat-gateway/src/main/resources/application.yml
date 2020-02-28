@@ -1,6 +1,19 @@
 server:
-  port: 8080
+  port: 80
+spring:
+  redis:
+    host: 211.159.219.193
+    port: 63791
+    password: WdPTMj6X
+    database: 0
+    pool:
+      max-active: 8
+      max-wait: -1
+      max-idle: 8
+      min-idle: 0
 wechat:
   publicAccount:
+    appId: wxa130f378f17b1626
+    appSecret: 2fca57476c6632588cff2362d8b01982
     token: hobby
     encodingAESKey: uDtsDjE5Ddx2idzNBMTKNQ8e9tn45JM21whwmwSNaXe
