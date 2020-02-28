@@ -5,4 +5,5 @@ public interface PublicAccountConfigService {
     String getAppSecret();
     String getToken();
     String getencodingAESKey();
+    byte[] getAESKey();
 }

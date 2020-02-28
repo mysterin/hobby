@@ -14,7 +14,7 @@ import java.util.Base64;
 public class SecurityUtil {
 
     public static String sha1(String str) throws NoSuchAlgorithmException {
-        byte[] bytes = str.getBytes(Charset.defaultCharset());
+        byte[] bytes = StringUtil.getBytes(str);
         return sha1(bytes);
     }
 
@@ -25,10 +25,22 @@ public class SecurityUtil {
         return str;
     }
 
+    public static String base64Encode(String str) {
+        byte[] bytes = StringUtil.getBytes(str);
+        return base64Encode(bytes);
+    }
+
+    public static String base64Encode(byte[] bytes) {
+        Base64.Encoder encoder = Base64.getEncoder();
+        byte[] encode = encoder.encode(bytes);
+        String s = new String(encode, StringUtil.DEFAULT_CHARSET);
+        return s;
+    }
+
     public static String base64Decode(String encodeStr) throws UnsupportedEncodingException {
         Base64.Decoder decoder = Base64.getDecoder();
         byte[] bytes = decoder.decode(encodeStr);
-        String s = new String(bytes, "UTF-8");
+        String s = new String(bytes, StringUtil.DEFAULT_CHARSET);
         return s;
     }
 

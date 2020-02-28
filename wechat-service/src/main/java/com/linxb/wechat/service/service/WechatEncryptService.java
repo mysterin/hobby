@@ -26,6 +26,13 @@ public interface WechatEncryptService {
      * @param encrypt
      * @return
      */
-    PublicAccountMessageDto parsePublicAccountMessage(String encrypt);
+    PublicAccountMessageDto decryptPublicAccountMessage(String encrypt);
+
+    /**
+     * 加密消息体
+     * @param message
+     * @return
+     */
+    String encryptPublicAccountMessage(String message);
 
 }

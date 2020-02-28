@@ -17,3 +17,7 @@ wechat:
     appSecret: 2fca57476c6632588cff2362d8b01982
     token: hobby
     encodingAESKey: uDtsDjE5Ddx2idzNBMTKNQ8e9tn45JM21whwmwSNaXe
+logging:
+  level:
+    com:
+      linxb: debug

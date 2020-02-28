@@ -34,4 +34,9 @@ public class PublicAccountConfigServiceImpl extends AbstractService implements P
     public String getencodingAESKey() {
         return publicAccountConfig.getEncodingAESKey();
     }
+
+    @Override
+    public byte[] getAESKey() {
+        return publicAccountConfig.getAesKey();
+    }
 }

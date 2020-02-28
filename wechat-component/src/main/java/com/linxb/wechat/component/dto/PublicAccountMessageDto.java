@@ -77,4 +77,18 @@ public class PublicAccountMessageDto {
     public void setMediaId(String mediaId) {
         this.mediaId = mediaId;
     }
+
+    @Override
+    public String toString() {
+        return "PublicAccountMessageDto{" +
+                "toUserName='" + toUserName + '\'' +
+                ", fromUserName='" + fromUserName + '\'' +
+                ", createTime=" + createTime +
+                ", msgType=" + msgType +
+                ", msgId=" + msgId +
+                ", content='" + content + '\'' +
+                ", picUrl='" + picUrl + '\'' +
+                ", mediaId='" + mediaId + '\'' +
+                '}';
+    }
 }

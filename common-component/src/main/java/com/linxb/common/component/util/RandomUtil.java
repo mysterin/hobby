@@ -22,4 +22,16 @@ public class RandomUtil {
         }
         return sb.toString();
     }
+
+    // 随机生成字符串
+    public static String getRandomStr(int num) {
+        String base = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+        Random random = new Random();
+        StringBuffer sb = new StringBuffer();
+        for (int i = 0; i < num; i++) {
+            int number = random.nextInt(base.length());
+            sb.append(base.charAt(number));
+        }
+        return sb.toString();
+    }
 }
