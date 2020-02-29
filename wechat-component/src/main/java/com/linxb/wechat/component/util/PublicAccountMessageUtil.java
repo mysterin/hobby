@@ -2,10 +2,9 @@ package com.linxb.wechat.component.util;
 
 import com.linxb.common.component.util.StringUtil;
 import com.linxb.common.component.util.XmlUtil;
-import com.linxb.wechat.component.config.PublicAccountMessageType;
-import com.linxb.wechat.component.config.WechatMessageKey;
+import com.linxb.wechat.component.constant.PublicAccountMessageType;
+import com.linxb.wechat.component.constant.WechatMessageKey;
 import com.linxb.wechat.component.dto.PublicAccountMessageDto;
-import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
 import org.dom4j.Element;

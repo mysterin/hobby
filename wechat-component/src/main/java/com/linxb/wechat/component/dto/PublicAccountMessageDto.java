@@ -1,6 +1,6 @@
 package com.linxb.wechat.component.dto;
 
-import com.linxb.wechat.component.config.PublicAccountMessageType;
+import com.linxb.wechat.component.constant.PublicAccountMessageType;
 
 public class PublicAccountMessageDto {
     private String toUserName;

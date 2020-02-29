@@ -1,33 +1,33 @@
 package com.linxb.wechat.service.service.impl;
 
 import com.linxb.common.component.service.AbstractService;
-import com.linxb.common.component.util.DateUtil;
-import com.linxb.wechat.component.config.PublicAccountMessageType;
+import com.linxb.wechat.component.constant.PublicAccountMessageType;
 import com.linxb.wechat.component.dto.PublicAccountMessageDto;
-import com.linxb.wechat.component.util.PublicAccountMessageUtil;
 import com.linxb.wechat.service.service.PublicAccountMessageHandlerService;
 import org.springframework.stereotype.Service;
 
+import javax.annotation.Resource;
+
+/**
+ * 处理公众号发送的消息
+ */
 @Service
 public class PublicAccountMessageHandlerServiceImpl extends AbstractService implements PublicAccountMessageHandlerService {
 
+    @Resource(name = "publicAccountTextMessageHandlerServiceImpl")
+    private PublicAccountMessageHandlerService publicAccountMessageHandlerService;
+
     @Override
-    public String handleMessage(PublicAccountMessageDto publicAccountMessageDto) {
-        String toUserName = publicAccountMessageDto.getFromUserName();
-        String fromUserName = publicAccountMessageDto.getToUserName();
-        Long createTime = DateUtil.timestamp();
-        PublicAccountMessageType msgType = PublicAccountMessageType.text;
-        String content = "welcome";
-
-        PublicAccountMessageDto responseMessage = new PublicAccountMessageDto();
-        responseMessage.setToUserName(toUserName);
-        responseMessage.setFromUserName(fromUserName);
-        responseMessage.setCreateTime(createTime);
-        responseMessage.setMsgType(msgType);
-        responseMessage.setContent(content);
-
-        String message = PublicAccountMessageUtil.messageObjectToXml(publicAccountMessageDto);
-
-        return message;
+    public String buildResponseMessage(PublicAccountMessageDto publicAccountMessageDto) {
+        String responseMessage = null;
+        PublicAccountMessageType msgType = publicAccountMessageDto.getMsgType();
+        switch (msgType) {
+            case text:
+                responseMessage = publicAccountMessageHandlerService.buildResponseMessage(publicAccountMessageDto);
+                break;
+            default:
+                break;
+        }
+        return responseMessage;
     }
 }

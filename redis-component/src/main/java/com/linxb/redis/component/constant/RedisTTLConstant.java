@@ -1,9 +1,9 @@
-package com.linxb.redis.component.config;
+package com.linxb.redis.component.constant;
 
 /**
  * redis 生存时间
  */
-public class RedisTTLConfig {
+public class RedisTTLConstant {
 
     public static final int ONE_MINUTE = 60;
     public static final int TEN_MINUTE = 10 * 60;

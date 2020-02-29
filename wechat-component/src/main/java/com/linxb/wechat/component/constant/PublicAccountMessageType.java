@@ -1,4 +1,4 @@
-package com.linxb.wechat.component.config;
+package com.linxb.wechat.component.constant;
 
 public enum PublicAccountMessageType {
     text,

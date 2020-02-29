@@ -1,4 +1,4 @@
-package com.linxb.wechat.component.config;
+package com.linxb.wechat.component.constant;
 
 public class WechatMessageKey {
 

@@ -1,4 +1,4 @@
-package com.linxb.wechat.gateway.config;
+package com.linxb.wechat.service.config;
 
 import com.linxb.wechat.component.config.PublicAccountConfig;
 import org.springframework.beans.factory.annotation.Value;

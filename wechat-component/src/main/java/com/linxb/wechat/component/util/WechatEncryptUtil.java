@@ -4,21 +4,15 @@ import com.linxb.common.component.util.RandomUtil;
 import com.linxb.common.component.util.SecurityUtil;
 import com.linxb.common.component.util.StringUtil;
 import com.linxb.common.component.util.XmlUtil;
-import com.linxb.wechat.component.config.WechatMessageKey;
+import com.linxb.wechat.component.constant.WechatMessageKey;
 import com.linxb.wechat.component.dto.DecryptMessageDto;
 import com.linxb.wechat.component.dto.EncryptMessageDto;
 import org.dom4j.DocumentException;
 
-import javax.crypto.BadPaddingException;
 import javax.crypto.Cipher;
-import javax.crypto.IllegalBlockSizeException;
-import javax.crypto.NoSuchPaddingException;
 import javax.crypto.spec.IvParameterSpec;
 import javax.crypto.spec.SecretKeySpec;
 import java.nio.charset.Charset;
-import java.security.InvalidAlgorithmParameterException;
-import java.security.InvalidKeyException;
-import java.security.NoSuchAlgorithmException;
 import java.util.Arrays;
 import java.util.Map;
 

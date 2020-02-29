@@ -1,5 +1,6 @@
 package com.linxb.wechat.gateway.controller;
 
+import com.linxb.common.component.test.AbstractSpringBootTest;
 import com.linxb.common.component.util.*;
 import org.junit.Test;
 
@@ -8,7 +9,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class PublicAccountControllerTest extends AbstractControllerTest {
+public class PublicAccountControllerTest extends AbstractSpringBootTest {
 
     private String token = "hobby";
 
