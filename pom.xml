@@ -33,6 +33,8 @@
         <commons.codec.version>1.11</commons.codec.version>
         <fastjson.version>1.2.59</fastjson.version>
         <dom4j.version>1.6.1</dom4j.version>
+        <webmagic.core.version>0.7.3</webmagic.core.version>
+        <webmagic.extension.version>0.7.3</webmagic.extension.version>
    </properties>
 
     <dependencyManagement>
@@ -77,6 +79,16 @@
                 <groupId>dom4j</groupId>
                 <artifactId>dom4j</artifactId>
                 <version>${dom4j.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>us.codecraft</groupId>
+                <artifactId>webmagic-core</artifactId>
+                <version>${webmagic.core.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>us.codecraft</groupId>
+                <artifactId>webmagic-extension</artifactId>
+                <version>${webmagic.extension.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
